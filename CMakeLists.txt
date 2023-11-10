@@ -27,7 +27,7 @@ set(STM32CUBEMX_GENERATED_FILES
         Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c
         Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c
         Core/Src/system_stm32f1xx.c
-        startup_stm32f100xb.s TM1637/tm1637_drv.c TM1637/tm1637_drv.h RTC_DRV/rtc_drv.c RTC_DRV/rtc_drv.h clock/clock.c clock/clock.h)
+        startup_stm32f100xb.s TM1637/tm1637_drv.c TM1637/tm1637_drv.h RTC_DRV/rtc_drv.c RTC_DRV/rtc_drv.h clock/clock.c clock/clock.h USART/USART.c)
 
 set(EXECUTABLE ${PROJECT_NAME}.elf)
 
@@ -47,6 +47,7 @@ target_include_directories(${EXECUTABLE} PRIVATE
         TM1637
         RTC_DRV
         clock
+        USART
         )
 
 target_compile_options(${EXECUTABLE} PRIVATE

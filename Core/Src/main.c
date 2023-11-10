@@ -24,6 +24,7 @@
 #include "tm1637_drv.h"
 #include "rtc_drv.h"
 #include "clock.h"
+#include "USART.h"
 
 
 /* Private includes ----------------------------------------------------------*/
@@ -176,6 +177,8 @@ int main(void)
 
 
     clock_init();
+    init_usart1();
+
 
   /* USER CODE END 2 */
 
